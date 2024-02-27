@@ -1,0 +1,68 @@
+<!-- Declare an information to the browser about what document type to export -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Detail</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="loading.css" media="screen" />
+    
+    <style type="text/css">
+        .st0 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 12;
+            stroke-miterlimit: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="container">
+            <div class="sub-title">Example of loading animation</div>
+
+            <div class="container-animation">
+                <b>• Spin loading:</b>
+                <div style="display: flex; flex-direction: row; gap: 50px; flex-wrap: wrap;">
+                    <div class="loading-box">
+                        Simple:
+                        <svg class="spin_simple" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path_simple" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                    </div>
+
+                    <div class="loading-box">
+                        Rainbow:
+                        <div class="spin_raise">
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loading-box">
+                        <svg height="600" width="800" xmlns="http://www.w3.org/2000/svg">
+                            <path id="path" class="path_temp" d="M 100 300 Q 150 50 200 300 Q 250 550 300 300 Q 350 50 400 300 C 450 550 450 50 500 300 C 550 50 650 200 650 300 A 50 50 0 1 1 100 300 " style="fill:none;stroke:green;stroke-width:3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <script>
+        var myPath = document.getElementById("path");
+        var length = myPath?.getTotalLength();
+        console.log(length);
+    </script>
+</body>
+
+</html>

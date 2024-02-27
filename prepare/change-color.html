@@ -1,0 +1,59 @@
+<!-- Declare an information to the browser about what document type to export -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Detail</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="change-color.css" media="screen" />
+</head>
+
+<body>
+    <div class="body">
+        <div class="container">
+            <div class="sub-title">Using animation property to create change color effect</div>
+
+            <div class="container-animation">
+                <b>• Change color:</b>
+                <div class="change-color"></div>
+            </div>
+
+            <div class="container-animation">
+                <b>• Change color with animation:</b>
+                <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        Normal:
+                        <div class="change-color-position">
+
+                            <div class="change-color-position-object"></div>
+                        </div>
+                    </div>
+                    <div>
+                        Reverse:
+                        <div class="change-color-position animation-reverse">
+                            <div class="change-color-position-object animation-reverse"></div>
+                        </div>
+                    </div>
+                    <div>
+                        Alternate:
+                        <div class="change-color-position animation-alternate">
+                            <div class="change-color-position-object animation-alternate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-animation">
+                <b>• Change color with animation circle:</b>
+                <div style="width: fit-content; display: flex; align-items: center; flex-direction: row; gap: 10px;">
+                    <div class="change-color-position-circle">
+                        <div class="change-color-position-circle-object"></div>
+                    </div>
+                    <span>Hover me!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

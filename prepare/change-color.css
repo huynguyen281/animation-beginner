@@ -1,0 +1,185 @@
+.change-color {
+    width: 100px;
+    height: 100px;
+    animation-name: change-color;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; /* Keep the state of last frames */
+}
+
+@keyframes change-color {
+    0% {
+        background-color: violet;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: navy;
+    }
+
+    75% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: violet;
+    }
+}
+
+
+.change-color-position {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    animation-name: change-color-position;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-color-position {
+    0% {
+        border-color: violet;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: navy;
+    }
+
+    75% {
+        border-color: green;
+    }
+
+    100% {
+        border-color: violet;
+    }
+}
+
+.change-color-position-object {
+    width: 50%;
+    height: 50%;
+    background-color: violet;
+    position: absolute;
+    animation-name: change-color-position-object;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes change-color-position-object {
+    0% {
+        background-color: violet;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 50%;
+        top: 0px;
+    }
+
+    50% {
+        background-color: navy;
+        left: 50%;
+        top: 50%;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 50%;
+    }
+
+    100% {
+        background-color: violet;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+.change-color-position-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid violet;
+    border-radius: 50%;
+    animation-name: change-color-position-circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes change-color-position-circle {
+    0% {
+        border-color: violet;
+        transform: rotateZ(0deg)
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: red;
+    }
+
+    75% {
+        border-color: green;
+    }
+
+    100% {
+        border-color: violet;
+        transform: rotateZ(360deg)
+    }
+}
+
+.change-color-position-circle-object {
+    width: 50%;
+    height: 50%;
+    background-color: violet;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    animation-name: change-color-position-circle-object;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes change-color-position-circle-object {
+    0% {
+        background-color: violet;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: red;
+    }
+
+    75% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: violet;
+    }
+}
+
+.change-color-position-circle:hover, .change-color-position-circle:hover > .change-color-position-circle-object {
+    animation-play-state: paused;
+    cursor: pointer;
+}
