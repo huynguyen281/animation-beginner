@@ -202,18 +202,133 @@
 }
 
 
+/* Process simple */
+.process-simple_1 {
+    height: 15px;
+    width: 250px;
+    border: 3px solid #4285F4;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2px;
+}
 
-/* */
-.path-sign {
-    stroke: #DE3E35;
-    stroke-dasharray: 39383;
-    stroke-dashoffset: 39383;
-    animation: dash_sign 10s ease-in-out infinite;
+.process-simple-bar_1 {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+    animation: process-simple_1 4s ease-out 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes dash_sign {
+@keyframes process-simple_1 {
     to {
-        stroke-dashoffset: 0;
+        width: 100%;
+    }
+}
+
+
+.process-simple_2 {
+    height: 20px;
+    width: 250px;
+    overflow: hidden;
+    background-color: rgb(95, 151, 241, 0.2);
+    box-shadow: 2px 2px 8px rgb(95, 151, 241, 0.5);
+}
+
+.process-simple-bar_2 {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+    animation: process-simple_2 4s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes process-simple_2 {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    60% {
+        width: 80%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.process-simple_3 {
+    height: 50px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #185fd1;
+    box-shadow: 4px 4px 12px rgb(95, 151, 241, 0.5);
+    position: relative;
+    border-radius: 8px;
+}
+
+.process-simple_3:not(.success):not(.loading):hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.process-simple_3-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 50;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    line-height: 0;
+}
+
+.process-simple_3-content p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.process-simple_3.loading .process-simple_3-content p,
+.process-simple_3.success .process-simple_3-content p {
+    display: none;
+}
+
+.process-simple_3:not(.loading) .process-simple_3-content .icon-loading {
+    display: none;
+}
+
+.process-simple_3:not(.success) .process-simple_3-content .icon-success {
+    display: none;
+}
+
+.process-simple-bar_3 {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+}
+
+.process-simple_3.loading .process-simple-bar_3{
+    animation: process-simple_3 4s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes process-simple_3 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 50%;
+    }
+
+    60% {
+        width: 80%;
+    }
+
+    100% {
+        width: 100%;
     }
 }

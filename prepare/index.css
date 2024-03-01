@@ -1,6 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;
+    -ms-overflow-style: none;
+        scrollbar-width: none;
 }
 
 body {
@@ -10,14 +12,21 @@ body {
 
 .body {
     width: 100%;
-    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 20px;
+    padding: 30px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 8px;
+}
+
+.box-shadow-container {
+    box-shadow: -2px 4px 12px rgb(87, 85, 85, 0.6);
 }
 
 .title {
@@ -78,6 +87,74 @@ body {
 .animation-alternate {
     animation-direction: alternate;
     animation-iteration-count: 2;
+}
+
+.animation-spin {
+    animation: animation-spinner 1s linear infinite;
+}
+
+@keyframes animation-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.slide-left-appearance-effect {
+    transform: translateX(0px);
+    animation: slide-left 1s linear 1;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-right-appearance-effect {
+    transform: translateX(0px);
+    animation: slide-right 1s linear 1;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-top-appearance-effect {
+    transform: translateY(0px);
+    animation: slide-top 1s linear 1;
+}
+
+@keyframes slide-top {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.rotate-appearance-effect {
+    animation: rotate-appearance 1s linear 1;
+    scale: 20%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate-appearance {
+    to {
+        transform: rotate(360deg);
+        scale: 100%;
+    }
 }
 
 /*
