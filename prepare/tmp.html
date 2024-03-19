@@ -1,0 +1,50 @@
+<!-- Declare an information to the browser about what document type to export -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Detail</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+</head>
+
+<body>
+    <div class="body">
+        <div class="container box-shadow-container" style="gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="height: 500px;width: 150px;position: relative;border: 2px solid rgb(49, 46, 46);">
+                    <div class="temp" style="width: 150px;height: 150px;background-color: #DE3E35;position: absolute; top: 0px; transition: top 1s linear;"></div>
+                </div>
+                <b style="font-size: 20px;">transition-delay: 0s</b>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="height: 500px;width: 150px;position: relative;border: 2px solid rgb(49, 46, 46);">
+                    <div class="temp" style="width: 150px;height: 150px;background-color: #4285F4;position: absolute; top: 0px; transition: top 1s linear 1s;"></div>
+                </div>
+                <b style="font-size: 20px;">transition-delay: 1s</b>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="height: 500px;width: 150px;position: relative;border: 2px solid rgb(49, 46, 46);">
+                    <div class="temp" style="width: 150px;height: 150px;background-color: #F7C223;position: absolute; top: 0px; transition: top 1s linear 2s;"></div>
+                </div>
+                <b style="font-size: 20px;">transition-delay: 2s</b>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="height: 500px;width: 150px;position: relative;border: 2px solid rgb(49, 46, 46);">
+                    <div class="temp" style="width: 150px;height: 150px;background-color: #1B9A59;position: absolute; top: 0px; transition: top 1s linear 3s;"></div>
+                </div>
+                <b style="font-size: 20px;">transition-delay: 3s</b>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .temp:hover div {
+            top: 350px;
+        }
+    </style>
+</body>
+
+</html>
