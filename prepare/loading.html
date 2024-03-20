@@ -1,0 +1,149 @@
+<!-- Declare an information to the browser about what document type to export -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Detail</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="loading.css" media="screen" />
+    
+    <style type="text/css">
+        .st0 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 12;
+            stroke-miterlimit: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="container box-shadow-container slide-left-appearance-effect">
+            <div class="sub-title">Example of loading animation</div>
+
+            <div class="container-animation">
+                <b>• Spin loading:</b>
+                <div style="display: flex; flex-direction: row; gap: 50px; flex-wrap: wrap;">
+                    <div class="loading-box">
+                        Simple:
+                        <svg class="spin_simple" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path_simple" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                    </div>
+
+                    <div class="loading-box">
+                        Rainbow:
+                        <div class="spin_raise">
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                            <div class="half-circle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-animation">
+                <b>• Process loading:</b>
+                <div style="display: flex; flex-direction: row; gap: 50px; flex-wrap: wrap;">
+                    <div class="loading-box">
+                        Simple:
+                        <div class="process-simple_1">
+                            <div class="process-simple-bar_1"></div>
+                        </div>
+                        <div class="process-simple_2">
+                            <div class="process-simple-bar_2"></div>
+                        </div>
+                        <div id="process-simple_3" class="process-simple_3" onclick="submit()">
+                            <div class="process-simple-bar_3"></div>
+                            <div class="process-simple_3-content">
+                                <svg class="animation-spin icon-loading" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 56 56">
+                                    <path fill="currentColor"
+                                        d="M53.949 26.303h-3.087c-1.24-11.47-11.11-20.597-22.873-20.597c-6.851 0-13.07 3.11-17.307 8c-.857.97-.722 2.163.157 2.794c.902.631 1.96.429 2.705-.405a19.118 19.118 0 0 1 14.445-6.558a19.074 19.074 0 0 1 18.997 16.766h-3.358c-1.6 0-2.028 1.082-1.15 2.321l5.026 7.189c.721 1.037 1.803 1.06 2.547 0l5.047-7.166c.902-1.262.474-2.344-1.149-2.344m-51.898 4.8h3.087c1.24 11.47 11.11 20.575 22.85 20.575c6.896 0 13.116-3.133 17.353-8c.811-.97.698-2.186-.158-2.817c-.901-.631-1.96-.406-2.704.428c-3.47 4.034-8.654 6.558-14.49 6.558A19.05 19.05 0 0 1 9.014 31.103h3.358c1.6 0 2.028-1.104 1.15-2.32l-5.049-7.19c-.72-1.036-1.78-1.059-2.524 0L.901 28.76C0 30 .428 31.104 2.051 31.104" />
+                                </svg>
+                                <svg class="icon-success" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
+                                    <path fill="currentColor"
+                                        d="M18 2a16 16 0 1 0 16 16A16 16 0 0 0 18 2m10.45 10.63L15.31 25.76L7.55 18a1.4 1.4 0 0 1 2-2l5.78 5.78l11.14-11.13a1.4 1.4 0 1 1 2 2Z"
+                                        class="clr-i-solid clr-i-solid-path-1" />
+                                    <path fill="none" d="M0 0h36v36H0z" />
+                                </svg>
+                                <p>Submit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-animation">
+                <b>• Text loading:</b>
+                <div style="display: flex; flex-direction: column; gap: 50px;">
+                    <div class="loading-box">
+                        Text:
+                        <div class="loading-box">
+                            <svg class="svg_huy" version="1.0" xmlns="http://www.w3.org/2000/svg" width="200.000000pt" height="100.000000pt"
+                                viewBox="0 0 300.000000 150.000000" preserveAspectRatio="xMidYMid meet">
+                                <g transform="translate(0.000000,150.000000) scale(0.050000,-0.050000)" fill="#000000" stroke="none">
+                                    <path class="path_huy" fill="none" stroke="none" stroke-width="6" d="M2214 2948 c-23 -24 -17 -2825 7 -2869 32 -61 1386 -61 1418 0 14 26
+                                        20 498 16 1445 l-5 1406 -65 6 c-105 10 -105 14 -105 -1397 l0 -1299 -550 0
+                                        -550 0 -2 1305 c-1 718 -8 1328 -16 1355 -14 50 -113 82 -148 48z" />
+                                    <path class="path_huy" fill="none" stroke="none" stroke-width="6" d="M5866 2925 c-7 -19 -24 -42 -38 -50 -14 -8 -31 -44 -39 -80 -8 -36
+                                        -31 -86 -52 -113 -20 -26 -37 -56 -37 -66 0 -11 -31 -85 -70 -165 -38 -80 -70
+                                        -156 -70 -168 0 -13 -7 -23 -16 -23 -9 0 -33 -38 -53 -85 -21 -47 -43 -89 -49
+                                        -95 -15 -13 -71 -126 -110 -225 -16 -41 -37 -75 -47 -75 -9 0 -18 -24 -21 -53
+                                        -6 -76 -20 -82 -59 -26 -19 27 -53 67 -77 89 -23 22 -86 94 -139 160 -53 66
+                                        -120 144 -148 172 -28 29 -96 109 -151 178 -55 69 -123 148 -150 177 -43 45
+                                        -159 186 -230 280 -67 89 -121 125 -179 119 -121 -12 -95 -121 70 -295 68 -70
+                                        160 -177 205 -236 45 -60 109 -137 143 -172 33 -35 102 -112 151 -171 50 -58
+                                        126 -144 170 -191 44 -46 116 -131 160 -188 43 -56 86 -103 95 -103 8 0 15
+                                        -22 15 -50 0 -27 -9 -50 -21 -50 -12 0 -35 -34 -51 -75 -17 -41 -62 -140 -99
+                                        -220 -38 -79 -69 -154 -69 -165 0 -11 -9 -20 -20 -20 -11 0 -20 -14 -20 -31 0
+                                        -16 -13 -35 -30 -42 -16 -6 -26 -18 -21 -25 5 -8 -15 -63 -44 -123 -29 -60
+                                        -56 -126 -59 -147 -4 -21 -20 -48 -35 -60 -16 -12 -48 -74 -71 -137 -24 -63
+                                        -56 -128 -71 -144 -82 -81 12 -217 109 -157 34 20 154 250 165 316 4 22 16 51
+                                        27 64 11 14 31 38 45 54 14 17 25 36 25 42 0 26 127 290 140 290 7 0 13 13 13
+                                        28 0 41 49 152 68 152 9 0 22 27 29 60 7 33 22 65 33 72 22 13 59 97 71 158 4
+                                        21 20 46 37 56 16 9 29 24 29 34 0 24 101 247 118 260 7 6 30 48 51 95 20 47
+                                        44 85 52 85 9 0 22 29 30 65 8 36 20 70 27 75 19 16 102 192 102 217 0 13 18
+                                        41 40 63 21 21 44 69 50 105 7 36 23 74 38 85 14 11 37 56 51 100 14 44 38 90
+                                        54 103 18 14 34 78 41 165 l12 142 -54 0 c-32 0 -58 -14 -66 -35z" />
+                                    <path class="path_huy" fill="none" stroke="none" stroke-width="6" d="M1572 2888 c-7 -17 -12 -305 -12 -640 l0 -608 -660 0 -659 0 -6 615
+                                        -5 615 -70 0 c-45 0 -68 -9 -65 -25 3 -14 -4 -25 -15 -25 -13 0 -20 -467 -20
+                                        -1360 0 -893 7 -1360 20 -1360 11 0 20 -14 20 -31 0 -23 17 -30 65 -25 l65 6
+                                        5 695 6 695 659 0 660 0 0 -649 c0 -735 3 -756 115 -747 l75 6 5 1385 c4 970
+                                        -1 1385 -16 1385 -12 0 -16 9 -9 20 19 31 -41 80 -96 80 -28 0 -55 -14 -62
+                                        -32z" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <script>
+        var myPath = document.getElementById("path");
+        var length = myPath?.getTotalLength();
+        console.log(length);
+
+        function submit() {
+            var processLoading = document.getElementById("process-simple_3");
+            if (processLoading.classList.contains('loading') || processLoading.classList.contains('success')) {
+                return
+            }
+            processLoading.classList.add('loading')
+            setTimeout(() => { 
+                processLoading.classList.remove('loading')
+                processLoading.classList.add('success');
+            }, 4000)
+        }
+    </script>
+</body>
+
+</html>

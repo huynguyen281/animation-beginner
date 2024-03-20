@@ -1,0 +1,334 @@
+.loading-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+:root {
+    --offset: 188;
+    --duration: 1.5s;
+}
+
+.spin_simple {
+    animation: rotator var(--duration) ease-in-out infinite;
+}
+
+@keyframes rotator {
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+.path_simple {
+    stroke-dasharray: var(--offset);
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+        colors 5s ease-in-out infinite,
+        dash var(--duration) ease-in-out infinite;
+}
+
+@keyframes colors {
+    0% {
+        stroke: #4285F4;
+    }
+
+    25% {
+        stroke: #DE3E35;
+    }
+
+    50% {
+        stroke: #F7C223;
+    }
+
+    75% {
+        stroke: #1B9A59;
+    }
+
+    100% {
+        stroke: #4285F4;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: var(--offset);
+    }
+
+    50% {
+        stroke-dashoffset: 48;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: var(--offset);
+        transform: rotate(450deg);
+    }
+}
+
+
+/* */
+.spin_raise {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+
+.half-circle {
+    border: 3px solid;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-45deg);
+    position: absolute;
+    animation: spin 2s cubic-bezier(.175, .885, .32, 1.275) infinite;
+}
+
+@keyframes spin {
+
+    0%,
+    15% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(315deg);
+    }
+}
+
+.half-circle:nth-child(1) {
+    width: 70px;
+    height: 70px;
+    border-top-color: #DE3E35;
+    border-right-color: #DE3E35;
+    animation-delay: 50ms;
+}
+
+.half-circle:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    border-top-color: #F7C223;
+    border-right-color: #F7C223;
+    animation-delay: 100ms;
+}
+
+.half-circle:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    border-top-color: #1B9A59;
+    border-right-color: #1B9A59;
+    animation-delay: 150ms;
+}
+
+.half-circle:nth-child(4) {
+    width: 40px;
+    height: 40px;
+    border-top-color: #42d9f4;
+    border-right-color: #42d9f4;
+    animation-delay: 200ms;
+}
+
+.half-circle:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    border-top-color: #4285F4;
+    border-right-color: #4285F4;
+    animation-delay: 250ms;
+}
+
+
+/* */
+.path_huy:nth-child(1) {
+    stroke: #DE3E35;
+    stroke-dasharray: 13902;
+    animation: dash_u 4s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+.path_huy:nth-child(2) {
+    stroke: #1B9A59;
+    stroke-dasharray: 10010;
+    animation: dash_y 4s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+.path_huy:nth-child(3) {
+    stroke: #4285F4;
+    stroke-dasharray: 14150;
+    animation: dash_h 4s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dash_u {
+    0% { stroke-dashoffset: 13902; }
+    65% { stroke-dashoffset: 0; fill: transparent; }
+    100% { fill:#DE3E35 }
+}
+
+@keyframes dash_y {
+    0% { stroke-dashoffset: 10010; }
+    65% { stroke-dashoffset: 0; fill: transparent; }
+    100% { fill: #1B9A59 }
+}
+
+@keyframes dash_h {
+    0% { stroke-dashoffset: 14150; }
+    65% { stroke-dashoffset: 0; fill: transparent; }
+    100% { fill: #4285F4 }
+}
+
+.svg_huy {
+    animation: rotate_huy 1s linear 4s 1;
+}
+
+@keyframes rotate_huy {
+    0% {
+        transform: rotateY(0);
+    }
+
+    50% {
+        transform: rotateY(15deg);
+    }
+
+    100% {
+        transform: rotateY(-15deg);
+    }
+}
+
+
+/* Process simple */
+.process-simple_1 {
+    height: 15px;
+    width: 250px;
+    border: 3px solid #4285F4;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.process-simple-bar_1 {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+    animation: process-simple_1 4s ease-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes process-simple_1 {
+    to {
+        width: 100%;
+    }
+}
+
+
+.process-simple_2 {
+    height: 20px;
+    width: 250px;
+    overflow: hidden;
+    background-color: rgb(95, 151, 241, 0.2);
+    box-shadow: 2px 2px 8px rgb(95, 151, 241, 0.5);
+}
+
+.process-simple-bar_2 {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+    animation: process-simple_2 4s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes process-simple_2 {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    60% {
+        width: 80%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.process-simple_3 {
+    height: 50px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #185fd1;
+    box-shadow: 4px 4px 12px rgb(95, 151, 241, 0.5);
+    position: relative;
+    border-radius: 8px;
+}
+
+.process-simple_3:not(.success):not(.loading):hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.process-simple_3-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 50;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    line-height: 0;
+}
+
+.process-simple_3-content p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.process-simple_3.loading .process-simple_3-content p,
+.process-simple_3.success .process-simple_3-content p {
+    display: none;
+}
+
+.process-simple_3:not(.loading) .process-simple_3-content .icon-loading {
+    display: none;
+}
+
+.process-simple_3:not(.success) .process-simple_3-content .icon-success {
+    display: none;
+}
+
+.process-simple-bar_3 {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #5f97f1, rgb(95, 151, 241, 0.5));
+}
+
+.process-simple_3.loading .process-simple-bar_3{
+    animation: process-simple_3 4s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes process-simple_3 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 50%;
+    }
+
+    60% {
+        width: 80%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

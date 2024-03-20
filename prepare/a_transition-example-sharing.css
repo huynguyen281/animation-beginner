@@ -1,0 +1,52 @@
+.transition-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgb(241, 239, 239);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.basic-transition {
+    height: 500px;
+    width: 150px;
+    position: relative;
+    border: 2px solid rgb(49, 46, 46);
+}
+
+.basic-transition div {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    background-color: #DE3E35;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+
+.basic-transition:hover div {
+    top: 350px;
+    background-color: #F7C223;
+}
+
+
+
+.btn-gradient-event {
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: -1px 4px 8px 0 rgba(241, 195, 203, 0.5);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.5s linear;
+    background: linear-gradient(to right, violet, pink 50%, violet) var(--x, 0) / 200%;
+}
+
+.btn-gradient-event:hover {
+    cursor: pointer;
+    translate: 0 -2px;
+    --x: 100%;
+}

@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -ms-overflow-style: none;
+        scrollbar-width: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.body {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 8px;
+}
+
+.box-shadow-container {
+    box-shadow: -2px 4px 12px rgb(87, 85, 85, 0.6);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: cornflowerblue;
+}
+
+.sub-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgb(2, 24, 65);
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(2, 24, 65);
+}
+
+.container-animation {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    transition: background 0.5s;
+    background: linear-gradient(to right, violet, pink 50%, violet) var(--x, 0) / 200%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: -1px 4px 8px 0 rgba(241, 195, 203, 0.5);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.item:hover {
+    cursor: pointer;
+    translate: 0 -2px;
+    animation-name: button-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    --x: 100%;
+}
+
+.animation-spin {
+    animation: animation-spinner 1s linear infinite;
+}
+
+@keyframes animation-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.slide-left-appearance-effect {
+    transform: translateX(0px);
+    animation: slide-left 1s linear 1;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-right-appearance-effect {
+    transform: translateX(0px);
+    animation: slide-right 1s linear 1;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-top-appearance-effect {
+    transform: translateY(0px);
+    animation: slide-top 1s linear 1;
+}
+
+@keyframes slide-top {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.rotate-appearance-effect {
+    animation: rotate-appearance 1s linear 1;
+    scale: 20%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate-appearance {
+    to {
+        transform: rotate(360deg);
+        scale: 100%;
+    }
+}
+
+/*
+Note:
+- animation-name: Define a name of animation (Keyframe)
+- animation-duration: Defines how long an animation should take to complete (Default is 0s)
+- animation-iteration-count: Times an Animation Should Run
+- animation-delay: Delay N(s) before start
+- animation-direction: normal/reverse/alternate/alternate-reverse (alternate: The animation is played forwards first, then backwards)
+
+- animation-timing-function: The speed curve of the animation 
+    + ease(default): slow start, then fast, then end slowly
+    + linear: same speed from start to end
+    + ease-in: slow start
+    + ease-out: slow end
+    + ease-in-out: slow start and end
+    + cubic-bezier(n, n, n, n): custom
+
+- animation-fill-mode
+- animation: the shorthand property
+- animation-play-state: paused;
+*/
