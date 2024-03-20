@@ -1,9 +1,11 @@
 .change-color {
     width: 100px;
     height: 100px;
+    background-color: violet;
     animation-name: change-color;
     animation-duration: 3s;
-    animation-fill-mode: forwards; /* Keep the state of last frames */
+    animation-delay: 2s;
+    animation-iteration-count: 2;
 }
 
 @keyframes change-color {
@@ -28,39 +30,17 @@
     }
 }
 
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ---------------- ANIMATION DIRECTION ------------------ */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
 
 .change-color-position {
     position: relative;
     width: 200px;
     height: 200px;
-    border: 2px solid;
-    animation-name: change-color-position;
-    animation-duration: 4s;
-    animation-delay: 3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change-color-position {
-    0% {
-        border-color: violet;
-    }
-
-    25% {
-        border-color: yellow;
-    }
-
-    50% {
-        border-color: navy;
-    }
-
-    75% {
-        border-color: green;
-    }
-
-    100% {
-        border-color: violet;
-    }
+    border: 1px solid;
 }
 
 .change-color-position-object {
@@ -70,7 +50,7 @@
     position: absolute;
     animation-name: change-color-position-object;
     animation-duration: 4s;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-timing-function: linear;
 }
 
@@ -105,6 +85,77 @@
         top: 0px;
     }
 }
+
+.animation-reverse {
+    animation-direction: reverse;
+}
+
+.animation-alternate {
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+.animation-alternate-reverse {
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 2;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ---------------- ANIMATION FILL MODE ------------------ */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+.animation-fill-mode-example {
+    width: 1000px;
+    height: 460px;
+    border: 1px solid;
+    position: relative;
+}
+
+.animation-fill-mode-example div {
+    width: 100px;
+    height: 100px;
+    background-color: #DE3E35;
+    position: absolute;
+    left: 0px;
+    animation-name: slide-to-right;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+.animation-fill-mode-example div:nth-child(1) {
+    top: 0px;
+    animation-fill-mode: none;
+}
+
+.animation-fill-mode-example div:nth-child(2) {
+    top: 120px;
+    animation-fill-mode: forwards;
+}
+
+.animation-fill-mode-example div:nth-child(3) {
+    top: 240px;
+    animation-fill-mode: backwards;
+}
+
+.animation-fill-mode-example div:nth-child(4) {
+    top: 360px;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-to-right {
+    from {
+        background-color: #1B9A59;
+        left: 0px;
+    }
+    to { 
+        background-color: #4285F4;
+        left: 900px;
+    }
+}
+
+
 
 
 .change-color-position-circle {

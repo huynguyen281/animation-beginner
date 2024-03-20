@@ -80,15 +80,6 @@ body {
     --x: 100%;
 }
 
-.animation-reverse {
-    animation-direction: reverse;
-}
-
-.animation-alternate {
-    animation-direction: alternate;
-    animation-iteration-count: 2;
-}
-
 .animation-spin {
     animation: animation-spinner 1s linear infinite;
 }

@@ -1,0 +1,30 @@
+.temp {
+    animation-name: slide;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slide {
+    0% { top: 0px }
+    33% { top: 120px; background-color: yellow; }
+    66% { top: 240px; background-color: violet; }
+    100% { top: 350px; }
+}
+
+/* .temp {
+    animation-name: slide_down;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide_down {
+    from { top: 0px; }
+    to { top: 350px; }
+} */
+
+
+
+
+
+
